@@ -40,7 +40,6 @@ BetaClassifier <- function(LeaveOutNum, Iterations, fraction, scrambled, expFile
   fullExpFile$domain_name<-ifelse(fullExpFile$domain == 1, "Temporal","Spatial")
   fullExpFile$sub_name = str_c(fullExpFile$group, numextract(fullExpFile$sub_name), sep = " ")
   
-  
   randHealthyId = sample(unique(fullExpFile[fullExpFile$group == "Healthy", "sub_name"]), 15);
   randPsychosisId = sample(unique(fullExpFile[fullExpFile$group == "Psychosis", "sub_name"]), 15);
   
